@@ -15,6 +15,7 @@ export default function PriceComparatorPage() {
     try {
       setLoading(true); // Start loading before fetching data
       const results = await search(searchQuery);
+      console.log(results)
       setSearchResults(results);
     } catch (error) {
       console.error(error);
