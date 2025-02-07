@@ -73,7 +73,7 @@ const Payment = () => {
 
       try {
         // Create order from backend
-        const response = await fetch("http://localhost:2424/order", {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_LINK}/order`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ amount: formData.amount}),
