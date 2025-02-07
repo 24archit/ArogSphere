@@ -84,12 +84,14 @@ const FindingHospital = () => {
 
     return (
         <div>
-            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" ,padding: "20px",backgroundImage: `url(https://t4.ftcdn.net/jpg/03/29/21/77/360_F_329217727_YOIkxbIXlUuAJ5Oxw12exTAogqfO2IxQ.jpg)`,backgroundPosition: "center",backgroundSize: "cover",width :"100%",height: "250px",opacity: "0.7"}}>
-                <h2 style={{ fontFamily: "poppins", textAlign: "center",padding: "20px" }}>Finding Nearby Hospitals</h2>
-                <div style={{ textAlign: "center" , padding: "10px"}}>
-                    <SearchBar onLocationSelect={handleLocationSelect} />
+            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", padding: "20px" }}>
+                <div style={{width: "100%",height: "300px",display: "flex",justifyContent: "center",alignItems: "center",flexDirection: "column"}}>
+                    <h2 style={{ fontFamily: "poppins", textAlign: "center", padding: "20px" }}>Finding Nearby Hospitals</h2>
+                    <div style={{ textAlign: "center", padding: "10px" }}>
+                        <SearchBar onLocationSelect={handleLocationSelect} />
+                    </div>
                 </div>
-                <div id="map" style={{ height: "700px", width: "100%",marginTop: "10px" }}></div>
+                <div id="map" style={{ height: "700px", width: "100%", marginTop: "10px" }}></div>
             </div>
         </div>
     );
