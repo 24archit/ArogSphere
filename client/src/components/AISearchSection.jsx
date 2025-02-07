@@ -1,14 +1,21 @@
+import {useNavigate} from 'react-router-dom'
 import Heading from "./Heading";
 import "../../assets/styles/AISearchSection.css";  
 
-import Button from "./Button";
 export default function AISearchSection() {
+
+  const navigate=useNavigate()
+
+  const clickOnPredict=()=>{
+    navigate("/ai-disease-prediction")
+  }
+
   return (
     <div className="ai-search-section">
       <div className="ai-search-content">
         <Heading text="AI-Powered Health Predictions at Your Fingertips" />
         <div className="ai-input-container">
-          <input 
+          {/* <input 
             type="text" 
             className="ai-input" 
             placeholder="Enter your symptoms (e.g., fever, headache)"
@@ -17,8 +24,8 @@ export default function AISearchSection() {
             type="number" 
             className="ai-input" 
             placeholder="Enter your age"
-          />
-         <Button role="Predict Now"/>
+          /> */}
+         <button onClick={clickOnPredict} className="ai-search-button">Start Predicting</button>
         </div>
         
         <div className="ai-info-box">

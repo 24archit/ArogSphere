@@ -47,8 +47,8 @@ const DiseasePrediction = () => {
         </div>
 
         {/* Content Above the Background */}
-        <div style={{ position: "relative", zIndex: "2", padding: "20px", color: "black",display: "flex",alignItems: "center",flexDirection: "column" }}>
-          <h1 style={{ textAlign: "center" }}>Disease Prediction System</h1>
+        <div style={{ position: "relative", zIndex: "2", padding: "30px", color: "black",display: "flex",alignItems: "center",flexDirection: "column"}}>
+          <h1 style={{ textAlign: "center",fontFamily: "poppins",color: "black" }}>Disease Prediction System</h1>
           <div style={{ width: "70%", }}>
             <MultiValue />
           </div>
