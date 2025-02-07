@@ -1,0 +1,71 @@
+.search-container {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.typewriter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.search-box {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  height: 300px; /* Adjust height as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.search-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../assets/media/MedBg.jpg") no-repeat center center/cover;
+  filter: brightness(0.3); /* Adjust for readability */
+}
+
+.search-input-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar {
+  width: 100rem; /* Adjust width as needed */
+  max-width: 500px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  background: white;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+.search-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
