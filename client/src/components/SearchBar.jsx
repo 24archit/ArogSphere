@@ -47,6 +47,7 @@ const SearchBar = ({ onLocationSelect }) => {
     return (
         <Stack spacing={2} sx={{ width: 300 }}>
             <Autocomplete
+            sx={{backgroundColor: "white",color: "black"}}
                 freeSolo
                 options={search ? suggestions.map((option) => option.display_name) : []}
                 onChange={handleSelectLocation}

@@ -81,7 +81,7 @@ export default function MultiValue() {
                         <TextField {...params} label="Select Symptoms" placeholder="Start typing..." />
                     )}
                 />
-                <Button onClick={getPrediction} variant="outlined" sx={{ marginTop: "20px", color: "black" }}>Predict</Button>
+                <Button onClick={getPrediction} variant="outlined" sx={{ marginTop: "20px", color: "black" ,backgroundColor: "#a8dfc3"}}>Predict</Button>
                 <div>
 
                     {predictions.length === 0 ? (<div style={{ paddingTop: "90px"}}><h3 style={{ color: "black" }}>Please Select Symptoms To Predict Disease</h3></div>) : (
