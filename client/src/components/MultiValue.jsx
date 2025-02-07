@@ -3,6 +3,7 @@ import Chip from '@mui/material/Chip';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import { Button } from '@mui/material';
+import Heading from './Heading';
 
 export default function MultiValue() {
     const [options, setOptions] = React.useState([]); // Options for the autocomplete
@@ -31,7 +32,7 @@ export default function MultiValue() {
 
     const getPrediction = async () => {
         try {
-            if (value.length == 0){
+            if (value.length == 0) {
                 return alert("Please select symptoms to predict disease")
             }
             const symptoms = value.map((val) => val.title);
@@ -58,8 +59,10 @@ export default function MultiValue() {
 
     return (
         <>
-            <div style={{display: "flex",justifyContent: "center",flexDirection: "column"}}>
+            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", padding: "20px" }}>
                 <Autocomplete
+                    color='white'
+                    sx={{ background: "white" }}
                     multiple
                     id="symptoms-autocomplete"
                     value={value}
@@ -78,23 +81,26 @@ export default function MultiValue() {
                         <TextField {...params} label="Select Symptoms" placeholder="Start typing..." />
                     )}
                 />
-                <Button onClick={getPrediction} variant="contained" sx={{ marginTop: "20px" }}>Predict</Button>
+                <Button onClick={getPrediction} variant="outlined" sx={{ marginTop: "20px", color: "black" }}>Predict</Button>
+                <div>
 
-                {predictions.length === 0 ? (<div style={{marginTop: "40px"}}><h3 style={{color: "red"}}>Please Select Symptoms To Predict Disease</h3></div>) : (
-                    <div style={{marginTop: "40px"}}>
-                        <div><h5>Disease: </h5>
-                            <span>{predictions.disease}</span>
+                    {predictions.length === 0 ? (<div style={{ paddingTop: "90px"}}><h3 style={{ color: "black" }}>Please Select Symptoms To Predict Disease</h3></div>) : (
+                        <div style={{ paddingTop: "90px",display: "flex",justifyContent: "center",flexDirection: "column"}}>
+                            <div style={{width: "100%",padding: "20px",borderRadius: "20px",display: "flex",justifyContent: "center",flexDirection: "column",alignItems: "center"}}>
+                                <div ><Heading text={"Disease"}></Heading></div>
+                                <span style={{fontSize: "20px"}}>{predictions.disease}</span>
+                            </div>
+                            <div style={{width: "100%",padding: "20px",borderRadius: "20px",display: "flex",justifyContent: "center",flexDirection: "column",alignItems: "center"}}>
+                            <div><Heading text={"Description"}></Heading></div>
+                                <span style={{fontSize: "20px",textAlign: "center"}}>{predictions.description}</span>
+                            </div>
+                            <div style={{width: "100%",padding: "20px",borderRadius: "20px",display: "flex",justifyContent: "center",flexDirection: "column",alignItems: "center"}}>
+                            <div><Heading text={"Precautions"}></Heading></div>
+                                <span style={{fontSize: "20px"}}>{predictions.precautions}</span>
+                            </div>
                         </div>
-                        <div>
-                            <h5>Descripton: </h5>
-                            <span>{predictions.description}</span>
-                        </div>
-                        <div>
-                            <h5>Precautions: </h5>
-                            <span>{predictions.precautions}</span>
-                        </div>
-                    </div>
-                )}
+                    )}
+                </div>
             </div>
         </>
     );

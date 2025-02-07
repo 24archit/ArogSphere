@@ -84,9 +84,9 @@ const FindingHospital = () => {
 
     return (
         <div>
-            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
-                <h2 style={{ fontFamily: "poppins", textAlign: "center" }}>Finding Nearby Hospitals</h2>
-                <div style={{ textAlign: "center" }}>
+            <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" ,padding: "20px"}}>
+                <h2 style={{ fontFamily: "poppins", textAlign: "center",padding: "20px" }}>Finding Nearby Hospitals</h2>
+                <div style={{ textAlign: "center" , padding: "10px"}}>
                     <SearchBar onLocationSelect={handleLocationSelect} />
                 </div>
                 <div id="map" style={{ height: "700px", width: "100%",marginTop: "10px" }}></div>
