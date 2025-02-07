@@ -247,7 +247,6 @@ export async function search(query) {
       method: "get",
       url: `${import.meta.env.VITE_SERVER_LINK}/price-comparator?q=${query}`,
     };
-    console.log(config);
     const response = await axios(config);
     return response.data;
   } catch (error) {

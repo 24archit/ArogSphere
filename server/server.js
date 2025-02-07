@@ -14,7 +14,7 @@ const { connectToDb } = require("./utils/connectToDb");
 const priceComparatorRoutes = require("./routes/priceComparator");
 app.use(compression());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(cors(corsOptions));
 connectToDb();
 app.use("/price-comparator", priceComparatorRoutes);

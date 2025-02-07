@@ -56,3 +56,6 @@ const SearchResults = ({ results }) => {
 };
 
 export default SearchResults;
+
+// if products is empty 
+// if mage or any off the sub keus is empty or null 
