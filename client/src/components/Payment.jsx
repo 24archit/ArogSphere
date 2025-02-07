@@ -125,7 +125,7 @@ const Payment = () => {
                 alert(`Payment verified and database updated successfully!`);
                 setFormData({ name: '', email: '', amount: '' }); // Reset form
                 //rediect to home page
-                navigate('/');
+                navigate('/crowd-sourcing');
             } else {
                 alert('Failed to update database. Please contact support.');
             }
