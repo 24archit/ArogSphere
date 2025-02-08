@@ -1,7 +1,10 @@
 import React from 'react'
 import SelectField from '../components/SelectField'
-
+import { useEffect } from 'react'
 const Estimation = () => {
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, []);
     return (
         <div style={{width: "100%",display: "flex",flexDirection: "column",justifyContent: "center",alignItems: "center",gap: "20px"}}>
             <div>

@@ -1,10 +1,12 @@
 import React from "react";
 import { Container, Typography, Grid, Card, CardContent, Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react";
 const LikedArticles = () => {
   const likedArticles = JSON.parse(localStorage.getItem("likedArticles")) || [];
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Container>
       <Typography variant="h2" textAlign="center" marginTop={5}>

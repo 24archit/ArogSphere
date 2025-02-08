@@ -4,7 +4,6 @@ import axios from 'axios';
 import L from 'leaflet';
 import SearchBar from '../components/SearchBar';
 import 'leaflet/dist/leaflet.css';
-
 const FindingHospital = () => {
     const [position, setPosition] = useState([20, 78]); // Default India center
     const [hospitals, setHospitals] = useState([]);
@@ -81,7 +80,9 @@ const FindingHospital = () => {
         const euclideanDistance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
         return euclideanDistance * 111;
     };
-
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, []);
     return (
         <div>
             <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center", padding: "20px" }}>

@@ -1,0 +1,132 @@
+/* General Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Input Section */
+.input-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+}
+
+.input-section h2 {
+  color: #2d7a54;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.input-section p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.autocomplete {
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+}
+
+/* Predict Button */
+.predict-btn {
+  margin-top: 20px;
+  background-color: #2d7a54 !important;
+  color: white !important;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.predict-btn:hover {
+  background-color: #256a47 !important;
+  transform: scale(1.05);
+}
+
+/* Results Section */
+.results-section {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.results-section h3 {
+  color: #2d7a54;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Result Cards */
+.result-card {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.result-card h4 {
+  color: #2d7a54;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.disease-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e63946;
+}
+
+.description {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Precaution Section */
+.precaution-section {
+  background: #eef7ee;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.precaution-section h4 {
+  color: #2d7a54;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.precaution-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.precaution-section li {
+  font-size: 16px;
+  color: #444;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .predict-btn {
+    width: 100%;
+  }
+}

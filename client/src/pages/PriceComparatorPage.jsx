@@ -23,7 +23,9 @@ export default function PriceComparatorPage() {
       setLoading(false); // Stop loading after fetching
     }
   };
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   useEffect(() => {
     fetchSearchResults();
   }, [searchQuery]);

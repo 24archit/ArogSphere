@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { useEffect } from "react";
 import {
   Container,
   Grid,
@@ -114,7 +115,9 @@ const HealthSchemes = () => {
       block: "start",
     });
   };
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Container>
       <Typography
