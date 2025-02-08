@@ -94,7 +94,7 @@ const Donation = () => {
                     <Button
                         variant="contained"
                         sx={{
-                            backgroundColor: 'black',
+                            backgroundColor: 'rgb(75, 75, 215)',
                             color: 'white',
                             borderRadius: '50px',
                             padding: '10px 20px',
@@ -119,83 +119,116 @@ const Donation = () => {
             </Box>
 
             {/* Horizontal Cards Section */}
+            {/* Horizontal Cards Section */}
             <Box
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'end',
-                    gap: 1,
-                    padding: 3,
-                    width: '100%',
-                    overflowX: 'auto',
-                }}
-            >
-                {[1, 2, 3, 4, 5, 6].map((item, index) => (
-                    <Card
-                        key={index}
-                        sx={{
-                            width: '15%',
-                            height: [1, 6].includes(item) ? '350px' : [2, 5].includes(item) ? '300px' : '250px',
-                            background: `url('https://static.vecteezy.com/system/resources/previews/051/824/879/non_2x/cozy-cafe-with-candles-on-a-wooden-table-snow-is-falling-outside-the-window-and-lights-are-shining-around-christmas-winter-evening-vertical-picture-stories-photo.jpg') center/cover`,
-                            color: 'white',
-                            position: 'relative',
-                            borderRadius: 2,
-                            overflow: 'hidden',
-                            textAlign: 'center',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                        }}
-                    >
-                        <CardContent
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'end',
+                        gap: 1,
+                        padding: 3,
+                        width: '100%',
+                        overflowX: 'auto',
+                    }}
+                >
+                    {[
+                        {
+                            title: 'Fever',
+                            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMFwIoaPrROAi2VQfvtjciba2aEsm2KUYjLg&s',
+                            link: 'https://www.medicalnewstoday.com/articles/168266',
+                        },
+                        {
+                            title: 'Cough',
+                            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_1myAC0Csma0gTIDaJ9kadCPktWLokNCKw&s',
+                            link: 'https://www.medicalnewstoday.com/articles/220349',
+                        },
+                        {
+                            title: 'Fracture',
+                            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXBPhRk1dlHPePdfEASOh4s8vE6DZeFnNBVQ&s',
+                            link: 'https://www.medicalnewstoday.com/articles/173312',
+                        },
+                        {
+                            title: 'Cardiac Arrest',
+                            image: 'https://www.nuhospitals.com/blog/wp-content/uploads/2022/09/7426742-800x500.jpg',
+                            link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11675880/#:~:text=Voluntary%20blood%20donation%20forms%20an,%2C%20cancer%2C%20and%20chronic%20diseases.',
+                        },
+                        {
+                            title: 'Rashes',
+                            image: 'https://img.freepik.com/free-vector/sad-female-cartoon-character-with-symptoms-eczema-woman-scratching-itching-hands-suffering-from-skin-disease-flat-vector-illustration-allergy-dermatology-concept-banner-website-design_74855-25282.jpg',
+                            link: 'https://www.medicalnewstoday.com/articles/317999',
+                        },
+                        {
+                            title: 'Blood Donation',
+                            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLRye_ixJ3XtFBy0EifOmHlKw-U_QK9ZWRnw&s',
+                            link: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11675880/#:~:text=Voluntary%20blood%20donation%20forms%20an,%2C%20cancer%2C%20and%20chronic%20diseases.',
+                        },
+                    ].map((item, index) => (
+                        <Card
+                            key={index}
                             sx={{
+                                width: '15%',
+                                height: [0, 5].includes(index) ? '350px' : [1, 4].includes(index) ? '300px' : '250px',
+                                background: `url(${item.image}) center/cover`,
+                                color: 'white',
                                 position: 'relative',
-                                zIndex: 2,
-                                padding: 2,
+                                borderRadius: 2,
+                                overflow: 'hidden',
+                                textAlign: 'center',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'space-between',
                             }}
                         >
-                            <Typography variant="h6" component="h2">
-                                ad {item}
-                            </Typography>
-                        </CardContent>
-                        <Box
-                            sx={{
-                                position: 'relative',
-                                zIndex: 2,
-                                paddingBottom: 2,
-                            }}
-                        >
-                            <Button
-                                variant="outlined"
+                            <CardContent
                                 sx={{
-                                    color: 'white',
-                                    borderColor: 'rgba(255, 255, 255, 0.7)',
-                                    backdropFilter: 'blur(10px)',
-                                    textTransform: 'none',
-                                    '&:hover': {
-                                        borderColor: 'white',
-                                        backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                                    },
+                                    position: 'relative',
+                                    zIndex: 2,
+                                    padding: 2,
                                 }}
                             >
-                                Learn More
-                            </Button>
-                        </Box>
-                        <Box
-                            sx={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                right: 0,
-                                bottom: 0,
-                                backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                                zIndex: 1,
-                            }}
-                        />
-                    </Card>
-                ))}
-            </Box>
-
+                                <Typography variant="h6" component="h2">
+                                    {item.title}
+                                </Typography>
+                            </CardContent>
+                            <Box
+                                sx={{
+                                    position: 'relative',
+                                    zIndex: 2,
+                                    paddingBottom: 2,
+                                }}
+                            >
+                                <Button
+                                    variant="outlined"
+                                    sx={{
+                                        color: 'white',
+                                        borderColor: 'rgba(255, 255, 255, 0.7)',
+                                        backdropFilter: 'blur(10px)',
+                                        textTransform: 'none',
+                                        '&:hover': {
+                                            borderColor: 'white',
+                                            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                        },
+                                    }}
+                                    href={item.link}
+                                    target="_blank"
+                                >
+                                    Learn More
+                                </Button>
+                            </Box>
+                            <Box
+                                sx={{
+                                    position: 'absolute',
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    backgroundColor: 'rgba(0, 0, 0, 0.2)',
+                                    zIndex: 1,
+                                }}
+                            />
+                        </Card>
+                    ))}
+                </Box>
             {/* Slider Section Below Cards */}
             <Box sx={{ padding: 3, textAlign: 'center' }}>
                 <Typography variant="h4" gutterBottom>

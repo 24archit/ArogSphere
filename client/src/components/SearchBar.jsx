@@ -60,7 +60,7 @@ const SearchBar = ({ onLocationSelect }) => {
                     />
                 )}
             />
-            <Button onClick={handleSearch} variant="outlined">Search</Button>
+            <Button onClick={handleSearch} variant="contained">Search</Button>
             
             {/* Show message when no results are found after search */}
             {search && suggestions.length === 0 && (

@@ -21,7 +21,7 @@
 }
 
 .input-section h2 {
-  color: #2d7a54;
+  color: rgb(75, 75, 215);
   font-size: 24px;
   margin-bottom: 5px;
 }
@@ -41,7 +41,7 @@
 /* Predict Button */
 .predict-btn {
   margin-top: 20px;
-  background-color: #2d7a54 !important;
+  background-color: rgb(75, 75, 215)!important;
   color: white !important;
   font-weight: bold;
   padding: 12px 20px;
@@ -50,7 +50,7 @@
 }
 
 .predict-btn:hover {
-  background-color: #256a47 !important;
+  background-color: rgb(75, 75, 215)!important;
   transform: scale(1.05);
 }
 
